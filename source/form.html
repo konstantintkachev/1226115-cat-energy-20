@@ -35,6 +35,81 @@
       </nav>
     </header>
 
+    <main class="page-form">
+      <section class="form">
+        <h2 class="form__title">Подбор программы</h2>
+        <div class="form__wrapper">
+          <h3 class="form__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</h3>
+          <form class="search-form" method="POST" action="https://echo.htmlacademy.ru">
+            <div class="search-form__wrapper">
+              <label class="search-form__label">Имя:*
+                <input class="search-form__input" type="text" placeholder="Барсик">
+              </label>
+              <label class="search-form__label">Вес (кг):
+                <input class="search-form__input" type="text" placeholder="7">
+              </label>
+              <label class="search-form__label">Возраст (лет):
+                <input class="search-form__input" type="text" placeholder="7">
+              </label>
+            </div>
+
+            <div class="radio-form">
+              <div class="radio-form__wrapper">
+                <input class="radio-form__input" name="name" type="radio" value="slimming" checked="checked" id="slimming">
+                <label class="radio-form__inner" for="slimming">Похудение</label>
+                <input class="radio-form__input" name="weigth" type="radio" value="weigth" id="weigth">
+                <label class="radio-form__inner" for="weigth">Набор массы</label>
+                <input class="radio-form__input" name="advice" type="radio" value="advice" id="advice">
+                <label class="radio-form__inner" for="advice">Не знаю (нужен ваш совет)</label>
+            </div>
+            </div>
+            <div class="form-contacts">
+              <div class="form-contacts__wrapper">
+                <label class="form-contacts__label">E-mail:*
+                  <input class="form-contacts__input" type="text" placeholder="kuklachev@gmail.com">
+                </label>
+                <label class="form-contacts__label">Телефон:*
+                  <input class="form-contacts__input" type="tel" placeholder="8 (960) 900-60-90">
+                </label>
+              </div>
+            </div>
+
+            <div class="form-comment">
+              <div class="form-comment__wrapper">
+                <h3 class="form-comment__title">Комментарий</h3>
+                <textarea name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
+            </div>
+
+            <div class="checkbox-form">
+              <div class="checkbox-form__wrapper">
+                <h3 class="checkbox-form__title">Дополнительно</h3>
+                <input class="checkbox-form__input" type="checkbox" name="sugar" checked="checked" id="sugar">
+                <label class="checkbox-form__inner" for="sugar">Сахарозаменитель</label>
+                <input class="checkbox-form__input" type="checkbox" name="water" id="water">
+                <label class="checkbox-form__inner" for="water">Питьевая вода</label>
+                <input class="checkbox-form__input" type="checkbox" name="milk" id="milk">
+                <label class="checkbox-form__inner" for="milk">Молоко</label>
+                <input class="checkbox-form__input" type="checkbox" name="vitamins" id="vitamins">
+                <label class="checkbox-form__inner" for="vitamins">Витамины</label>
+              </div>
+
+              <button class="search-form__btn" type="submit" aria-label="Кнопка отправить заявку">Отправить заявку</button>
+              <span class="search-form__help">* — Обязательные поля</span>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div class="contacts">
+        <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+        <p class="contacts__text">
+          ул. Большая<br>
+          Конюшенная, д. 19/8<br>
+          Санкт-Петербург
+        </p>
+      </div>
+    </main>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <img class="page-footer__logo" src="#" alt="Логотип Кэт энерджи">
