@@ -8,7 +8,7 @@
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="#" alt="Логотип Кэт энерджи">
+        <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -55,7 +55,6 @@
             </div>
 
             <div class="radio-form">
-              <div class="radio-form__wrapper">
                 <input class="radio-form__input" name="name" type="radio" value="slimming" checked="checked" id="slimming">
                 <label class="radio-form__inner" for="slimming">Похудение</label>
                 <input class="radio-form__input" name="weigth" type="radio" value="weigth" id="weigth">
@@ -63,9 +62,9 @@
                 <input class="radio-form__input" name="advice" type="radio" value="advice" id="advice">
                 <label class="radio-form__inner" for="advice">Не знаю (нужен ваш совет)</label>
             </div>
-            </div>
             <div class="form-contacts">
               <div class="form-contacts__wrapper">
+                <h3 class="form-contacts__title">Контактные данные (владельца кота)</h3>
                 <label class="form-contacts__label">E-mail:*
                   <input class="form-contacts__input" type="text" placeholder="kuklachev@gmail.com">
                 </label>
@@ -78,7 +77,7 @@
             <div class="form-comment">
               <div class="form-comment__wrapper">
                 <h3 class="form-comment__title">Комментарий</h3>
-                <textarea name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+                <textarea class="form-comment__text" name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
 
@@ -101,7 +100,7 @@
           </form>
         </div>
       </section>
-      <div class="contacts">
+      <div class="contacts contacts__wrapper">
         <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
         <p class="contacts__text">
           ул. Большая<br>
@@ -109,6 +108,7 @@
           Санкт-Петербург
         </p>
       </div>
+      <div class="map"></div>
     </main>
 
     <footer class="page-footer">
