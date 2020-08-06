@@ -1,8 +1,15 @@
+.description {
+  position: relative;
+}
+
 .description__main {
   min-height: 305px;
   background-color: @basic_green;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 29px;
+  min-width: 320px;
 }
 
 .description__title {
@@ -11,6 +18,9 @@
   font-size: 36px;
   font-weight: 400;
   text-align: center;
+  margin-top: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .description__text {
@@ -28,6 +38,8 @@
   height: 270px;
   padding-left: 20px;
   padding-right: 20px;
+  position: absolute;
+  top: 172px;
 }
 
 .description__wrapper {
@@ -36,6 +48,9 @@
   background-color: @basic_green;
   text-align: center;
   margin: 0 auto;
+  margin-top: 135px;
+  box-sizing: border-box;
+  padding-top: 7px;
 }
 
 .description__link {
@@ -44,4 +59,88 @@
   font-size: 14px;
   text-transform: uppercase;
   line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .description {
+    min-width: 708px;
+  }
+
+  .description__main {
+    background-color: @basic-white;
+    background-image: none;
+    min-height: auto;
+  }
+
+  .description__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+    padding-left: 100px;
+    padding-right: 208px;
+    text-align: left;
+  }
+
+  .description__text {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-black;
+    text-align: left;
+    padding-left: 100px;
+  }
+
+  .description__banner {
+    background-image: url("../../img/index-can-tablet@1x.png");
+    width: 709px;
+    height: 609px;
+    background-repeat: no-repeat;
+    padding: 0 30px;
+    box-sizing: border-box;
+    top: 239px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .description__wrapper {
+    width: 245px;
+    height: 45px;
+    margin-top: 48px;
+    margin-left: 90px;
+    padding: 11px 5px 5px;
+  }
+
+  .description__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description__main {
+    padding-top: 0;
+    padding-left: 190px;
+    width: 414px;
+  }
+
+  .description__title {
+    margin-top: 113px;
+    padding: 0;
+  }
+
+  .description__text {
+    padding-left: 0;
+  }
+
+  .description__wrapper {
+    margin-left: 190px;
+  }
+
+  .description__banner {
+    top: -74px;
+    left: 795px;
+    width: 552px;
+    height: 499px;
+    background-size: cover;
+  }
 }

@@ -2,22 +2,24 @@
 <html class="page"lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
-      </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__logo" href="index.html">
+                <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
+              </a>
+            </li>
             <li class="site-list__item site-list__item--active">
-              <a href="#">
+              <a href="index.html">
                 Главная
               </a>
             </li>
@@ -27,12 +29,11 @@
               </a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">
+              <a href="#">
                 Подбор программы
               </a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
 
@@ -114,6 +115,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
+      </div>
         <div class="socials">
           <ul class="socials__list">
             <li class="socials__item">
@@ -141,7 +143,6 @@
             <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html">
           </a>
         </div>
-      </div>
     </footer>
   </body>
 </html>

@@ -8,6 +8,12 @@
   width: 280px;
   min-height: 266px;
   background-color: @basic_grey;
+  padding-top: 29px;
+  padding-left: 20px;
+  padding-right: 36px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding-bottom: 22px;
 }
 
 .advice__title {
@@ -31,4 +37,57 @@
   text-transform: uppercase;
   color: @basic-black;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advice {
+    margin-top: 529px;
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  .advice__list {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .advice__item {
+    width: 708px;
+    padding-left: 53px;
+    padding-bottom: 55px;
+    margin-bottom: 30px;
+  }
+
+  .advice__title {
+    font-size: 36px;
+    line-height: 37px;
+    text-align: left;
+  }
+
+  .advice__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 61px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advice {
+    margin-top: 268px;
+    padding: 0 110px;
+    width: 1220px;
+  }
+
+  .advice__list {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    grid-gap: 60px;
+    height: auto;
+  }
+
+  .advice__item {
+    width: 570px;
+    margin: 0;
+  }
 }
