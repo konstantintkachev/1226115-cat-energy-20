@@ -1,12 +1,17 @@
 .sample {
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.sample__container {
+  width: 280px;
+  padding: 0 20px;
 }
 
 .sample__title {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  width: auto;
 }
 
 .sample__list {
@@ -23,6 +28,11 @@
 
 @media (min-width: @tablet-width) {
   .sample {
+    margin-top: 50px;
+  }
+
+  .sample__container {
+    width: 708px;
     padding: 0 30px;
   }
 
@@ -39,8 +49,9 @@
 }
 
 @media (min-width: @desktop-width) {
-  .sample {
+  .sample__container {
     padding: 0 110px;
+    width: 1220px;
   }
 
   .sample__list {

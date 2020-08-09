@@ -1,6 +1,6 @@
-.goods {
-  padding-left: 20px;
-  padding-right: 20px;
+.goods__container {
+  width: 280px;
+  padding: 0 20px;
 }
 
 .goods__title {
@@ -33,4 +33,44 @@
   font-size: 14px;
   line-height: 14px;
   color: @special_dark_grey;
+}
+
+@media (min-width: @tablet-width) {
+  .goods__container {
+    padding: 0 30px;
+    width: 708px;
+  }
+
+  .goods__title {
+    padding-left: 34px;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 0;
+  }
+
+  .goods__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+  }
+
+  .goods__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .goods__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .goods__number {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .goods__btn-wrapper {
+    width: 633px;
+  }
 }
