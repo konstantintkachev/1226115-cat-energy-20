@@ -2,54 +2,68 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="#">
-                Главная
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__container">
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__logo" href="index.html">
+                  <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт энерджи">
+                </a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a href="#">
+                  Главная
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a href="catalog.html">
+                  Каталог продукции
+                </a>
+              </li>
+              <li class="site-list__item">
+                <a href="form.html">
+                  Подбор программы
+                </a>
+              </li>
+            </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Cat energy - худей с нами!</h1>
     <section class="description">
-      <div class="description__main">
-        <h2 class="description__title">Функциональное питание для котов</h2>
-        <p class="description__text">Занялся собой? Займись котом!</p>
+      <div class="description__container">
+        <div class="description__main">
+          <h2 class="description__title">Функциональное питание для котов</h2>
+          <p class="description__text">Занялся собой? Займись котом!</p>
+          <div class="description__wrapper">
+            <a class="description__link" href="form.html">
+              Подобрать программу
+            </a>
+          </div>
+          <div class="description__banner">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/index-can-desktop@1x.png 1x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.png 1x">
+              <img src="img/index-can-mobile@1x.png" alt="Питание Cat-Energy">
+            </picture>
+          </div>
+        </div>
       </div>
-      <div class="description__banner"></div>
-      <div class="description__wrapper">
-        <a class="description__link" href="form.html">
-          Подобрать программу
-        </a>
-      </div>
-      <div class="advice">
+    </section>
+
+    <section class="advice">
+      <div class="advice__container">
         <ul class="advice__list">
           <li class="advice__item">
             <h3 class="advice__title">Похудение</h3>
@@ -71,7 +85,10 @@
           </li>
         </ul>
       </div>
-      <div class="sample">
+    </section>
+
+    <section class="sample">
+      <div class="sample__container">
         <h2 class="sample__title">Как это работает</h2>
         <ul class="sample__list">
           <li class="sample__item">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -82,21 +99,22 @@
         </ul>
       </div>
     </section>
+
     <article class="result">
+      <div class="result__container">
         <h2 class="result__title">Живой пример</h2>
         <p class="result__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
         </p>
-        <div class="result__container">
           <dl class="result__list">
             <dt class="result__term">5 кг</dt>
             <dd class="result__description">снижение веса</dd>
             <dt class="result__term">60 дней</dt>
             <dd class="result__description">затрачено времени</dd>
           </dl>
-          <span class="result__total">Затраты на питание: 15 000 руб.</span>
-          <img src="img/before-mobile@1x.png" width="311" height="232" alt="Кот">
-        </div>
+        <span class="result__total">Затраты на питание: 15 000 руб.</span>
+      </div>
+      <div class="result__banner"></div>
     </article>
     <div class="contacts">
       <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
@@ -110,8 +128,9 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
+        <div class="page-footer__wrapper">
+          <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
+        </div>
         <div class="socials">
           <ul class="socials__list">
             <li class="socials__item">
@@ -139,7 +158,6 @@
             <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип html">
           </a>
         </div>
-      </div>
     </footer>
   </body>
 </html>

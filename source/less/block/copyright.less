@@ -1,6 +1,25 @@
+.copyright {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .copyright__link {
   text-decoration: none;
   color: @special_dark_grey;
   font-family: @basicFontFamily-2;
   font-size: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    justify-content: flex-end;
+  }
 }

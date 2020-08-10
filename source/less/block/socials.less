@@ -1,4 +1,21 @@
+.socials {
+  margin-bottom: 53px;
+}
+
 .socials__list {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+@media (min-width: @tablet-width) {
+  .socials {
+    margin: 0;
+  }
+
+  .socials__list {
+    margin: 0;
+  }
 }
