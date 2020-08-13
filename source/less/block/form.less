@@ -1,6 +1,6 @@
-.form {
-  padding-left: 20px;
-  padding-right: 20px;
+.form__container {
+  padding: 0 20px;
+  width: 280px;
 }
 
 .form__title {
@@ -14,4 +14,37 @@
   line-height: 18px;
   text-transform: uppercase;
   font-weight: 400;
+  padding-right: 54px;
+  margin-bottom: 39px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__container {
+    padding: 0 30px;
+    width: 708px;
+  }
+
+  .form__title {
+    font-size: 60px;
+  }
+
+  .form__subtitle {
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 345px;
+    line-height: 30px;
+    margin-bottom: 69px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__container {
+    padding: 0 110px;
+    width: 1220px;
+  }
+
+  .form__subtitle {
+    padding-left: 0;
+    width: 323px;
+  }
 }

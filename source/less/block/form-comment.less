@@ -1,11 +1,55 @@
+.form-comment {
+  margin-top: 19px;
+}
+
 .form-comment__title {
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  margin-bottom: 31px;
 }
 
 .form-comment__text {
   text-transform: uppercase;
   line-height: 18px;
   color: @special_dark_grey;
+  width: 280px;
+  height: 150px;
+  font-size: 16px;
+  font-family: @basicFontFamily;
+  padding: 13px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .form-comment {
+    margin-top: 50px;
+    padding-left: 41px;
+    padding-right: 37px;
+  }
+
+  .form-comment__title {
+    font-size: 36px;
+    list-style: 36px;
+    margin-bottom: 71px;
+  }
+
+  .form-comment__text {
+    width: 602px;
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-comment {
+    padding: 0;
+  }
+
+  .form-comment__text {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
