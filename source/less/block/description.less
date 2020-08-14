@@ -11,7 +11,6 @@
 .description__main {
   height: 305px;
   background-repeat: no-repeat;
-  padding-top: 29px;
   margin: 0 -20px;
   background-image: url("../../img/index-background-mobile@1x.jpg");
   background-color: @basic_green;
@@ -64,7 +63,6 @@
 
 @media (min-width: @tablet-width) {
   .description {
-    width: 708px;
     margin-top: 60px;
   }
 
@@ -121,7 +119,6 @@
 @media (min-width: @desktop-width) {
   .description__main {
     padding-left: 103px;
-    min-height: min-content;
   }
 
   .description__title {
@@ -137,10 +134,19 @@
   }
 
   .description__banner {
-    top: -74px;
-    left: 795px;
-    width: 552px;
-    height: 499px;
-    background-size: cover;
+    top: -131px;
+    left: 562px;
+
+    &::after {
+      content: "";
+      background-image: url("../../img/index-background-desktop@1x.jpg");
+      width: 720px;
+      height: 696px;
+      display: block;
+      position: absolute;
+      top: -92px;
+      right: -327px;
+      z-index: -1;
+    }
   }
 }

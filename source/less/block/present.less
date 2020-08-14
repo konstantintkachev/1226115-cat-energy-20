@@ -1,14 +1,58 @@
-.present__photo {
+.present {
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-color: @basic_green;
   width: 280px;
   height: 289px;
-  background-color: @basic_green;
   margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.present__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  height: 289px;
 }
 
 .present__text {
   font-family: @basicFontFamily-2;
   font-size: 16px;
   line-height: 20px;
+  width: 159px;
+  color: @basic-white;
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: 708px;
+    height: 200px;
+    background-size: cover;
+    margin-top: 90px;
+  }
+
+  .present__container {
+    flex-direction: row;
+    height: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    width: 245px;
+    height: 289px;
+    margin-bottom: 45px;
+    margin-left: 465px;
+  }
+
+  .present__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 289px;
+  }
 }
