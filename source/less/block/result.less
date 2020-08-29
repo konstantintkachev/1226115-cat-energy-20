@@ -1,7 +1,9 @@
 .result {
   background-color: @basic_grey;
-  padding-bottom: 70px;
+  padding-bottom: 0;
   position: relative;
+  margin-top: 47px;
+  min-height: 705px;
 }
 
 .result__container {
@@ -13,7 +15,8 @@
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  padding-top: 30px;
+  padding-top: 18px;
+  margin-bottom: 22px;
 }
 
 .result__text {
@@ -25,13 +28,10 @@
 
 .result__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 124px 124px;
+  grid-template-rows: min-content min-content;
   text-align: center;
-}
-
-.result__weight {
-  grid-row-start: 2;
+  column-gap: 32px;
 }
 
 .result__term {
@@ -39,6 +39,12 @@
   line-height: 24px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border: 1px solid @special_grey;
+  padding-top: 14px;
+  margin-top: 8px;
+  padding-bottom: 19px;
 }
 
 .result__description {
@@ -47,8 +53,25 @@
   font-size: 12px;
   line-height: 12px;
   margin: 0;
-  padding-left: 29px;
-  padding-right: 29px;
+  padding-right: 0;
+  padding-left: 0;
+  height: min-content;
+}
+
+.result__weight {
+  grid-row-start: 2;
+  width: 74px;
+  margin-left: 23px;
+  margin-top: -19px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.result__time {
+  margin-top: -19px;
+  width: 80px;
+  margin-left: 22px;
+  background-color: #f2f2f2;
 }
 
 .result__total {
@@ -56,11 +79,25 @@
   line-height: 20px;
   text-transform: uppercase;
   padding-left: 47px;
+  margin-top: 19px;
+  margin-bottom: 36px;
+}
+
+.result__banner {
+  width: 311px;
+  height: 232px;
+  margin-left: -20px;
+}
+
+.result__picture {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .result {
     background-color: transparent;
+    margin-top: 43px;
+    height: auto;
   }
 
   .result__container {
@@ -71,16 +108,25 @@
   .result__title {
     font-size: 60px;
     line-height: 60px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 64px;
   }
 
   .result__text {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 29px;
   }
 
   .result__wrapper {
     display: flex;
     justify-content: space-between;
+    min-height: min-content;
+  }
+
+  .result__list {
+    column-gap: 41px;
   }
 
   .result__term {
@@ -92,11 +138,14 @@
     font-size: 14px;
     line-height: 14px;
     padding: 0;
+    background-color: transparent;
+    width: auto;
+    margin-left: 0;
   }
 
   .result__list {
     grid-template-columns: 162px 162px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content min-content;
   }
 
   .result__total {
@@ -105,10 +154,49 @@
     width: 174px;
     text-align: end;
     padding: 0;
+    margin-top: 36px;
+  }
+
+  .result__total span {
+    display: block;
+    margin-top: 9px;
+  }
+
+  .result__pictures {
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    position: relative;
+  }
+
+  .result__pictures::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 462px;
+    width: 768px;
+    background-color: #eaeaea;
+    z-index: -2;
+    bottom: -13px;
   }
 
   .result__banner {
-    background-color: @basic_grey;
+    background-color: none;
+    margin-top: 0px;
+    width: 354px;
+    height: 620px;
+    overflow: hidden;
+    margin-left: 5px;
+    box-sizing: border-box;
+  }
+
+  .result__picture {
+    display: flex;
+    width: 354px;
+    height: 607px;
+    overflow: hidden;
+    justify-content: flex-end;
+    box-sizing: border-box;
   }
 }
 
@@ -121,10 +209,16 @@
   .result__container {
     padding: 0 110px;
     width: 1220px;
+    position: relative;
+  }
+
+  .result__title {
+    margin-bottom: 147px;
   }
 
   .result__text {
     width: 435px;
+    margin-bottom: 44px;
   }
 
   .result__wrapper {
@@ -132,18 +226,24 @@
   }
 
   .result__total {
-    text-align: center;
+    text-align: left;
     min-width: 327px;
 
     span {
-      margin-left: 58px;
+      margin-left: 0;
     }
   }
 
   .result__banner {
-    position: absolute;
     background-color: transparent;
-    top: 0;
-    right: 30px;
+  }
+
+  .result__pictures {
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    position: absolute;
+    top: -113px;
+    left: 671px;
   }
 }

@@ -3,12 +3,13 @@
   display: grid;
   grid-template-rows: min-content min-content min-content;
   padding: 39px 20px 31px;
+  margin-top: 28px;
 }
 
 .page-footer__wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 51px;
+  margin-bottom: 31px;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,10 +26,23 @@
     margin: 0;
     justify-content: flex-start;
   }
+
+  .page-footer__logo {
+    margin-left: 10px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer {
+    padding-top: 49px;
+    box-sizing: border-box;
+  }
+
   .page-footer__wrapper {
     justify-content: flex-start;
+  }
+
+  .page-footer__logo {
+    margin-left: 90px;
   }
 }

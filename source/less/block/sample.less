@@ -1,5 +1,6 @@
 .sample {
   margin: 0 auto;
+  padding-bottom: 0;
 }
 
 .sample__container {
@@ -12,24 +13,135 @@
   line-height: 40px;
   font-weight: 400;
   width: auto;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 .sample__list {
   padding: 0;
   list-style: none;
+  position: relative;
 }
 
 .sample__item {
   font-family: @basicFontFamily-2;
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
   color: @special_dark_grey;
+  margin-left: 80px;
+}
+
+.sample__number {
+  display: none;
+}
+
+.sample__item:nth-child(1)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../../img/advantage-leaf@1x.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 42px;
+  z-index: 2;
+  left: 7px;
+  top: 2px;
+}
+
+.sample__item:nth-child(1)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @basic_green;
+  width: 60px;
+  height: 60px;
+  top: -2px;
+  left: 0;
+}
+
+.sample__item--block-2 {
+  margin-top: 26px;
+}
+
+.sample__item:nth-child(2)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../../img/advantage-powder@1x.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  left: 6px;
+  top: 81px;
+}
+
+.sample__item:nth-child(2)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @basic_green;
+  width: 60px;
+  height: 60px;
+  top: 78px;
+  left: 0;
+}
+
+.sample__item:nth-child(3)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../../img/advantage-dining@1x.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 42px;
+  z-index: 2;
+  left: 4px;
+  top: 162px;
+}
+
+.sample__item:nth-child(3)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @basic_green;
+  width: 60px;
+  height: 60px;
+  top: 157px;
+  left: 0;
+}
+
+.sample__item:nth-child(4)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../../img/advantage-clock@1x.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 42px;
+  z-index: 2;
+  left: 4px;
+  top: 242px;
+}
+
+.sample__item:nth-child(4)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @basic_green;
+  width: 60px;
+  height: 60px;
+  top: 237px;
+  left: 0;
 }
 
 @media (min-width: @tablet-width) {
   .sample {
-    margin-top: 50px;
+    margin-top: 45px;
+    min-height: 626px;
+    border-bottom: 1px solid @basic-grey-line;
+    padding-bottom: 61px;
   }
 
   .sample__container {
@@ -51,10 +163,151 @@
   .sample__item {
     font-size: 16px;
     line-height: 24px;
+    margin-top: 145px;
+    margin-left: 0px;
+    padding-right: 89px;
+  }
+
+  .sample__item--block-2 {
+    margin-top: 145px;
+    margin-left: 30px;
+  }
+
+  .sample__item--block-3 {
+    margin-top: 182px;
+  }
+
+  .sample__item--block-4 {
+    margin-top: 182px;
+    margin-left: 30px;
+    padding-right: 78px;
+  }
+
+  .sample__item:nth-child(1)::before {
+    content: "";
+    width: 40px;
+    height: 42px;
+    left: 15px;
+    top: 48px;
+  }
+
+  .sample__item:nth-child(1)::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: 32px;
+    left: 0;
+  }
+
+  .sample__item:nth-child(2)::before {
+    content: "";
+    width: 40px;
+    height: 42px;
+    z-index: 2;
+    left: 399px;
+    top: 47px;
+  }
+
+  .sample__item:nth-child(2)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: @basic_green;
+    width: 80px;
+    height: 80px;
+    top: 31px;
+    left: 384px;
+  }
+
+  .sample__item:nth-child(3)::before {
+    content: "";
+    width: 40px;
+    height: 42px;
+    left: 15px;
+    top: 364px;
+  }
+
+  .sample__item:nth-child(3)::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: 350px;
+    left: 0;
+  }
+
+  .sample__item:nth-child(4)::before {
+    content: "";
+    width: 40px;
+    height: 42px;
+    left: 399px;
+    top: 364px;
+  }
+
+  .sample__item:nth-child(4)::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: 349px;
+    left: 384px;
+  }
+
+  .sample__number {
+    display: block;
+  }
+
+  .sample__number {
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    font-family: @basicFontFamily;
+    top: -9px;
+    left: 118px;
+    color: @basic_grey;
+    z-index: -1;
+  }
+
+  .sample__number-two {
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    font-family: @basicFontFamily;
+    color: @basic_grey;
+    z-index: -1;
+    top: -7px;
+    left: 495px;
+  }
+
+  .sample__number-three {
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    font-family: @basicFontFamily;
+    color: @basic_grey;
+    z-index: -1;
+    top: 309px;
+    left: 114px;
+  }
+
+  .sample__number-four {
+    font-size: 280px;
+    line-height: 280px;
+    position: absolute;
+    font-family: @basicFontFamily;
+    color: @basic_grey;
+    z-index: -1;
+    top: 309px;
+    left: 498px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .sample {
+    margin-top: 73px;
+    min-height: 362px;
+    border-bottom: 0;
+    padding-bottom: 35px;
+  }
+
   .sample__container {
     padding: 0 110px;
     width: 1220px;
@@ -64,5 +317,73 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+  }
+
+  .sample__item:nth-child(2)::before {
+    content: "";
+    left: 341px;
+  }
+
+  .sample__item:nth-child(2)::after {
+    content: "";
+    left: 324px;
+  }
+
+  .sample__item--block-2 {
+    margin-left: 18px;
+    padding-right: 65px;
+  }
+
+  .sample__number-two {
+    left: 438px;
+  }
+
+  .sample__item:nth-child(3)::before {
+    content: "";
+    left: 665px;
+    top: 47px;
+  }
+
+  .sample__item:nth-child(3)::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: 31px;
+    left: 650px;
+  }
+
+  .sample__item--block-3 {
+    margin-top: 143px;
+    margin-left: 39px;
+    padding-right: 62px;
+  }
+
+  .sample__number-three {
+    top: -10px;
+    left: 762px;
+  }
+
+  .sample__item:nth-child(4)::before {
+    content: "";
+    left: 990px;
+    top: 46px;
+
+  }
+
+  .sample__item:nth-child(4)::after {
+    content: "";
+    top: 31px;
+    left: 975px;
+  }
+
+  .sample__item--block-4 {
+    margin-top: 143px;
+    margin-left: 59px;
+    padding-right: 0;
+  }
+
+  .sample__number-four {
+    top: -8px;
+    left: 1087px;
   }
 }
