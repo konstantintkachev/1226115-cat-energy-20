@@ -1,6 +1,17 @@
 .catalog {
   padding-left: 20px;
   padding-right: 20px;
+  position: relative;
+}
+
+.catalog__box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  background-color: @basic-grey-line;
+  left: 0;
 }
 
 .catalog__wrapper {
@@ -16,18 +27,35 @@
   line-height: 20px;
 }
 
+.catalog__link img {
+  margin-top: 3px;
+}
+
+.catalog__link--picture img {
+  margin-top: 18px;
+}
+
 .catalog__wrapper-link {
   padding-right: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: -4px;
 }
 
 .catalog__table {
   width: 100%;
+  font-family: @basicFontFamily-2;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog__wrapper-link--title {
+  margin-top: 7px;
 }
 
 .catalog__row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .catalog__column {
@@ -45,6 +73,49 @@
   margin-bottom: 25px;
   padding: 7px 0;
   box-sizing: border-box;
+  margin-top: 11px;
+}
+
+.catalog__btn-wrapper--two {
+  margin-top: 8px;
+}
+
+.catalog__link--fish img {
+  margin-right: 36px;
+  margin-top: 46px;
+  margin-left: 36px;
+}
+
+.catalog__container--fish {
+  margin-top: 30px;
+  width: 140px;
+}
+
+.catalog__wrapper-link--fish {
+  padding-right: 67px;
+  margin-top: -17px;
+  margin-bottom: 7px;
+}
+
+.catalog__btn-wrapper--fish {
+  margin-top: 16px;
+}
+
+.catalog__link--fish-big img {
+  margin-left: 28px;
+  margin-top: 28px;
+  margin-right: 26px;
+}
+
+.catalog__row--fish-big {
+  margin-top: -2px;
+  margin-right: -4px;
+}
+
+.catalog__wrapper-link--fish-big {
+  margin-top: 11px;
+  padding-right: 42px;
+  padding-left: 2px;
 }
 
 .catalog__btn {
@@ -55,6 +126,47 @@
   line-height: 20px;
 }
 
+.catalog__btn-wrapper--buckwheat-small {
+  margin-top: -9px;
+}
+
+.catalog__link--buckwheat-small img {
+  margin-top: 27px;
+  margin-left: 36px;
+}
+
+.catalog__container--buckwheat-small {
+  box-sizing: border-box;
+  padding-left: 36px;
+  padding-top: 17px;
+  margin-bottom: 28px;
+}
+
+.catalog__link--buckwheat-big img {
+  margin-top: 30px;
+  margin-left: 27px;
+}
+
+.catalog__container--buckwheat-big {
+  margin-left: 29px;
+  margin-top: 13px;
+  padding-bottom: 4px;
+}
+
+.catalog__btn-wrapper--buckwheat-big {
+  margin-top: 9px;
+}
+
+.catalog__link--rice-small img {
+  margin-top: 42px;
+  margin-left: 34px;
+}
+
+.catalog__container--rice-small {
+  margin-left: 33px;
+  margin-top: 19px;
+}
+
 @media (min-width: @tablet-width) {
   .catalog {
     display: grid;
@@ -63,12 +175,22 @@
     width: 708px;
     padding: 0 30px;
     grid-gap: 60px;
-    margin-top: 155px;
+    margin-top: 136px;
   }
 
   .catalog__box {
     background-color: @basic_grey;
-    margin-bottom: 92px;
+    margin-bottom: 78px;
+    height: 433px;
+    box-sizing: border-box;
+  }
+
+  .catalog__box::after {
+    display: none;
+  }
+
+  .catalog__container {
+    padding: 0 37px;
   }
 
   .catalog__wrapper {
@@ -79,16 +201,41 @@
     font-size: 20px;
     line-height: 20px;
     text-align: center;
+
+    span {
+      margin-left: 44px;
+    }
   }
 
   .catalog__wrapper-link {
     padding: 0;
-    margin-bottom: 28px;
+    margin-bottom: 15px;
+    padding: 0 62px;
   }
 
   .catalog__img img {
-    margin-top: -81px;
-    margin-bottom: 39px;
+    margin-top: -72px;
+    margin-bottom: 36px;
+  }
+
+  .catalog__img--big img {
+    margin-bottom: 17px;
+  }
+
+  .catalog__link--big span {
+    margin-left: 41px;
+  }
+
+  .catalog__row {
+    display: flex;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid @special_grey;
+  }
+
+  .catalog__column {
+    font-size: 16px;
+    line-height: 16px;
   }
 
   .catalog__show {
@@ -96,7 +243,97 @@
   }
 
   .catalog__btn-wrapper {
-    margin-top: 39px;
+    width: 249px;
+    margin-top: 23px;
+    margin-bottom: 37px;
+  }
+
+  .catalog__link--fish img {
+    margin-bottom: 18px;
+  }
+
+  .catalog__container--fish {
+    margin-top: 30px;
+    width: 250px;
+  }
+
+  .catalog__wrapper-link--fish {
+    padding-left: 64px;
+    padding-right: 60px;
+  }
+
+  .catalog__link--fish-big img {
+    margin: 28px 26px 20px 28px;
+  }
+
+  .catalog__wrapper-link--fish-big {
+    padding-right: 61px;
+    padding-left: 63px;
+  }
+
+  .catalog__link--fish-big img {
+    margin-top: -73px;
+  }
+
+  .catalog__link--fish-big span {
+    margin-left: 41px;
+  }
+
+  .catalog__link--buckwheat-small img {
+    margin-left: 0;
+  }
+
+  .catalog__wrapper-link--buckwheat-small {
+    padding-right: 58px;
+  }
+
+  .catalog__row--buckwheat-small {
+    padding-bottom: 5px;
+  }
+
+  .catalog__btn-wrapper--buckwheat-small {
+    margin-top: 0;
+  }
+
+  .catalog__row--border {
+    margin-bottom: 3px;
+  }
+
+  .catalog__link--buckwheat-big img {
+    margin-left: 0;
+    margin-bottom: 22px;
+  }
+
+  .catalog__wrapper-link--buckwheat-big {
+    padding-left: 63px;
+    padding-right: 58px;
+  }
+
+  .catalog__container--buckwheat-big {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 35px;
+    margin-right: 34px;
+  }
+
+  .catalog__link--rice-small img {
+    margin-left: 0;
+    margin-bottom: 17px;
+  }
+
+  .catalog__wrapper-link--rice-small {
+    padding-left: 64px;
+    padding-right: 59px;
+  }
+
+  .catalog__link--rice-small span {
+    margin-left: 46px;
+  }
+
+  .catalog__container--rice-small {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 34px;
   }
 }
 
@@ -112,5 +349,59 @@
   .catalog__btn-wrapper {
     width: 170px;
     margin-bottom: 0;
+  }
+
+  .catalog__img img {
+    margin-top: -49px;
+    margin-bottom: 42px;
+  }
+
+  .catalog__wrapper-link {
+    padding-left: 23px;
+    padding-right: 22px;
+  }
+
+  .catalog__link--picture img {
+    margin-top: -76px;
+    margin-bottom: 21px;
+  }
+
+  .catalog__link--fish img {
+    margin-top: -50px;
+    margin-bottom: 23px;
+  }
+
+  .catalog__container--fish {
+    width: 245px;
+    box-sizing: border-box;
+  }
+
+  .catalog__wrapper-link--fish {
+    padding-left: 23px;
+    padding-right: 19px;
+  }
+
+  .catalog__link--fish-big img {
+    margin-top: -79px;
+    margin-bottom: 72px;
+  }
+
+  .catalog__link--buckwheat-small img {
+    margin-top: -66px;
+  }
+
+  .catalog__wrapper-link--buckwheat-small {
+    padding-right: 18px;
+    padding-left: 23px;
+  }
+
+  .catalog__link--buckwheat-big img {
+    margin-top: -94px;
+    margin-bottom: 20px;
+  }
+
+  .catalog__link--rice-small img {
+    margin-top: -68px;
+    margin-bottom: 23px;
   }
 }

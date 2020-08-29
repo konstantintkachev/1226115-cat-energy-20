@@ -26,6 +26,8 @@
   font-weight: 400;
   text-align: center;
   margin-top: 0;
+  padding-top: 28px;
+  margin-bottom: 0;
 }
 
 .description__text {
@@ -34,6 +36,7 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  margin-top: 24px;
 }
 
 .description__banner {
@@ -48,7 +51,7 @@
   background-color: @basic_green;
   text-align: center;
   margin: 0 auto;
-  margin-top: 312px;
+  margin-top: 303px;
   box-sizing: border-box;
   padding-top: 7px;
 }
@@ -63,7 +66,7 @@
 
 @media (min-width: @tablet-width) {
   .description {
-    margin-top: 60px;
+    margin-top: 31px;
   }
 
   .description__container {
@@ -74,18 +77,20 @@
   .description__main {
     background-color: transparent;
     background-image: none;
-    width: 709px;
-    min-height: 609px;
+    width: 720px;
+    height: 696px;
   }
 
   .description__title {
     font-size: 60px;
     line-height: 60px;
     color: @basic-black;
-    padding-left: 60px;
+    margin-left: 87px;
     text-align: left;
     width: auto;
-    padding-right: 71px;
+    padding-right: 16px;
+    margin-bottom: 41px;
+    padding-top: 0;
   }
 
   .description__text {
@@ -93,21 +98,21 @@
     line-height: 20px;
     color: @basic-black;
     text-align: left;
-    padding-left: 60px;
+    margin-left: 88px;
   }
 
   .description__banner {
     z-index: -1;
-    top: 185px;
+    top: 156px;
   }
 
   .description__wrapper {
     width: 245px;
     height: 52px;
     padding: 15px 5px 5px;
-    margin-top: 48px;
+    margin-top: 30px;
     float: left;
-    margin-left: 60px;
+    margin-left: 82px;
   }
 
   .description__link {
@@ -117,25 +122,38 @@
 }
 
 @media (min-width: @desktop-width) {
+  .description__container {
+    width: 1220px;
+    padding: 0 110px;
+  }
+
   .description__main {
-    padding-left: 103px;
+    padding-left: 0px;
+    width: 720px;
+    height: auto;
+    margin-left: 0;
   }
 
   .description__title {
-    margin-top: 113px;
+    margin-top: 105px;
+    margin-left: 80px;
+    width: 414px;
+    padding-right: 0;
   }
 
   .description__text {
-    padding-left: 60px;
+    padding-left: 0;
+    margin-left: 80px;
   }
 
   .description__wrapper {
-    margin-left: 60px;
+    margin-left: 80px;
+    padding-top: 19px;
   }
 
   .description__banner {
-    top: -131px;
-    left: 562px;
+    top: -128px;
+    left: 561px;
 
     &::after {
       content: "";
@@ -144,7 +162,7 @@
       height: 696px;
       display: block;
       position: absolute;
-      top: -92px;
+      top: -145px;
       right: -327px;
       z-index: -1;
     }
