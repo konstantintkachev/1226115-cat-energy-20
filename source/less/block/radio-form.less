@@ -1,15 +1,38 @@
 .radio-form {
   display: flex;
   flex-direction: column;
-  margin-top: 54px;
+  margin-top: 43px;
+  position: relative;
+}
+
+.radio-form::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @basic-grey-line;
+  width: 320px;
+  height: 1px;
+  top: -28px;
+  left: -20px;
+}
+
+.radio-form::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @basic-grey-line;
+  width: 320px;
+  height: 1px;
+  top: 129px;
+  left: -20px;
 }
 
 .radio-form__inner {
   text-transform: uppercase;
   line-height: 18px;
   position: relative;
-  margin-bottom: 40px;
-  padding-left: 50px;
+  margin-bottom: 25px;
+  padding-left: 45px;
 }
 
 .radio-form__input {
@@ -27,7 +50,7 @@
   border: 1px solid @special_grey;
   border-radius: 50%;
   left: 0;
-  top: -6px;
+  top: -8px;
 }
 
 .radio-form__input:checked + .radio-form__inner::after {
@@ -38,25 +61,67 @@
   position: absolute;
   border-radius: 50%;
   left: 10px;
-  top: 4px;
+  top: 2px;
 }
 
 @media (min-width: @tablet-width) {
   .radio-form {
-    margin-top: 108px;
-    padding-left: 69px;
+    margin-top: 52px;
+    padding-top: 35px;
+    padding-left: 26px;
+    margin-left: 41px;
+    margin-right: 37px;
+    border: 1px solid @basic-grey-line;
   }
 
   .radio-form__inner {
     font-size: 20px;
     line-height: 20px;
-    padding-left: 50px;
+    padding-left: 60px;
+    margin-bottom: 33px;
+  }
+
+  .radio-form::before {
+    content: "";
+    display: none;
+  }
+
+  .radio-form::after {
+    content: "";
+    display: none;
+  }
+
+  .radio-form__inner::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: -11px;
+  }
+
+  .radio-form__input:checked + .radio-form__inner::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    top: 1px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .radio-form {
-    width: 50%;
+    margin-right: 0px;
+    margin-left: 38px;
+    width: 572px;
+    padding-top: 36px;
+    padding-left: 28px;
     margin-top: 0;
+    height: 198px;
+    padding-bottom: 29px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .radio-form__inner {
+    margin-bottom: 33px;
   }
 }

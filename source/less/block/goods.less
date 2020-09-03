@@ -1,3 +1,8 @@
+.goods {
+  margin-top: 52px;
+  position: relative;
+}
+
 .goods__container {
   width: 280px;
   padding: 0 20px;
@@ -7,6 +12,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  margin-bottom: 34px;
 }
 
 .goods__list {
@@ -14,11 +20,30 @@
   padding: 0;
 }
 
+.goods__item {
+  border-top: 1px solid @basic-grey-line;
+}
+
+.goods__item:nth-child(4) {
+  border-bottom: 1px solid @basic-grey-line;
+}
+
 .goods__subtitle {
   font-size: 16px;
   color: @special_dark_grey-2;
   text-transform: uppercase;
   font-weight: 400;
+  margin-bottom: 9px;
+  margin-top: 9px;
+}
+
+.subtitle {
+  margin-top: 6px;
+}
+
+.goods__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .goods__text {
@@ -35,17 +60,92 @@
   color: @special_dark_grey;
 }
 
+.goods__btn-wrapper {
+  width: 280px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: @basic_green;
+  text-align: center;
+  padding: 7px 0;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-bottom: 19px;
+}
+
+.wrapper-btn {
+  margin-top: 12px;
+}
+
+.wrapper-button {
+  margin-bottom: 17px;
+}
+
+.goods__link {
+  color: @basic-white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 @media (min-width: @tablet-width) {
   .goods__container {
     padding: 0 30px;
     width: 708px;
   }
 
+  .goods {
+    margin-top: -13px;
+  }
+
   .goods__title {
-    padding-left: 34px;
+    padding-left: 37px;
+    top: 19px;
+    width: 338px;
+    padding-right: 35px;
+    background-color: @basic-white;
+    margin-bottom: 81px;
     font-size: 36px;
     line-height: 36px;
     margin-top: 0;
+  }
+
+  .goods__title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 767px;
+    height: 3px;
+    background-color: @basic_green;
+    z-index: -1;
+  }
+
+  .goods__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid @basic-grey-line;
+  }
+
+  .goods__box {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 17px;
+  }
+
+  .container-box {
+    margin-top: 20px;
+  }
+
+  .goods__subtitle {
+    margin-left: 5px;
+  }
+
+  .subtitle-milk {
+    margin-top: 7px;
   }
 
   .goods__item {
@@ -68,16 +168,29 @@
   .goods__number {
     font-size: 16px;
     line-height: 20px;
+    margin-left: 52px;
+    margin-right: 3px;
+  }
+
+  .number-water {
+    margin-left: 60px;
   }
 
   .goods__btn-wrapper {
     width: 633px;
+    margin-bottom: 27px;
+  }
+
+  .wrapper-btn {
+    margin-bottom: 27px;
+    margin-top: 16px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .goods {
-    width: 43%;
+    margin-top: -19px;
+    margin-bottom: 10px;
   }
 
   .goods__container {
@@ -85,28 +198,76 @@
     width: 1220px;
   }
 
+  .goods__case {
+    display: flex;
+  }
+
+  .goods__box {
+    margin-top: 0;
+  }
+
   .goods__title {
     padding: 0;
-    margin-bottom: 103px;
+    margin-bottom: 75px;
+    width: 373px;
+  }
+
+  .goods__subtitle {
+    margin-left: 0;
+  }
+
+  .goods__text {
+    margin-right: 58px;
+  }
+
+  .goods__title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 1440px;
+    height: 3px;
+    background-color: @basic_green;
+    z-index: -1;
   }
 
   .goods__list {
     display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    margin-bottom: 50px;
+    flex-direction: column;
+    width: 896px;
+    margin-top: 6px;
   }
 
   .goods__item {
     padding: 0;
-    width: 590px;
+    width: auto;
     height: 70px;
+    display: flex;
+    flex-direction: row;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
   }
 
   .goods__btn-wrapper {
-    width: 245px;
+    width: 359px;
     margin-left: 40px;
     margin-right: 0;
-    margin-top: 15px;
+    margin-top: 22px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+  }
+
+  .number-water {
+    margin-left: 126px;
+  }
+
+  .number-milk {
+    margin-left: 135px;
+  }
+
+  .number-vitamins {
+    margin-left: 61px;
   }
 }

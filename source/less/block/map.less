@@ -1,12 +1,25 @@
+.map {
+  height: 331px;
+}
+
+.map__catalog {
+  height: 362px;
+}
+
 .map__img {
   background-image: url("../img/bg-map-mobile@1x.png"), url("../img/bg-map-mobile@2x.png");
   background-repeat: no-repeat;
-  height: 331px;
-  width: auto;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
+  background-size: cover;
 }
 
 @media (min-width: @tablet-width) {
+  .map {
+    height: 400px;
+  }
+
   .map__img {
     background-image: url("../../img/bg-map-tablet@1x.png");
     height: 400px;
