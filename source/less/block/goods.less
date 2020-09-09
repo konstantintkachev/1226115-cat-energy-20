@@ -20,6 +20,17 @@
   padding: 0;
 }
 
+.goods__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 53px;
+  height: 3px;
+  background-color: @basic_green;
+  right: 0;
+  top: 14px;
+}
+
 .goods__item {
   border-top: 1px solid @basic-grey-line;
 }
@@ -108,6 +119,10 @@
     font-size: 36px;
     line-height: 36px;
     margin-top: 0;
+  }
+
+  .goods__title::after {
+    display: none;
   }
 
   .goods__title::before {
