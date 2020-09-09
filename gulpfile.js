@@ -10,8 +10,6 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const html = require("gulp-html");
-const posthtml = require("gulp-posthtml");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -36,15 +34,14 @@ exports.styles = styles;
 
 // Html
 
-const Html = () => {
+const htmlTask = () => {
   return (gulp.src("source/*.html"))
   .pipe(plumber())
-  .pipe(posthtml())
   .pipe(gulp.dest("build/"))
   .pipe(sync.stream());
 }
 
-exports.Html = Html;
+exports.htmlTask = htmlTask;
 
 // Images
 
@@ -103,9 +100,9 @@ const build = (done) => gulp.series (
   copy,
   styles,
   sprite,
-  html
+  htmlTask
   )
-done();
+(done);
 exports.build = build;
 
 // Server
@@ -119,7 +116,7 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
-  done();
+  (done);
 }
 
 exports.server = server;
@@ -128,9 +125,9 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("htmlTask"));
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  clean, copy, styles, htmlTask, server, watcher
 );
