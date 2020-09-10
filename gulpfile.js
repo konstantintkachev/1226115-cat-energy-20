@@ -116,7 +116,7 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
-  (done);
+  done();
 }
 
 exports.server = server;

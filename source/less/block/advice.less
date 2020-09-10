@@ -116,12 +116,19 @@
   content: "";
   display: block;
   position: absolute;
-  background-image: url("..//../img/icon-right-arrow-verylong.svg");
+  background-image: url("..//../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
   width: 25px;
   height: 12px;
   left: 120px;
   bottom: 23px;
+}
+
+.advice__link:hover::after,
+.advice__link:focus::after {
+  background-image: url("..//../img/icon-right-arrow-verylong.svg");
+  width: 34px;
+  height: 12px;
 }
 
 @media (min-width: @tablet-width) {
@@ -212,7 +219,7 @@
 
 @media (min-width: @desktop-width) {
   .advice {
-    margin-top: 372px;
+    margin-top: 267px;
   }
 
   .advice__container {
@@ -274,7 +281,7 @@
 
   .advice__link::after {
     content: "";
-    left: 188px;
+    left: 183px;
     bottom: 66px;
   }
 }
